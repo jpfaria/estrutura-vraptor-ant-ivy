@@ -1,0 +1,31 @@
+Essa estrutura contém configuração para básica para um projeto que use VRaptor, ant e ivy
+contamos que você esteja usando o Eclipse.
+Tem configuração para testes unitários, de aceitação (sem selenium por enquanto) e de produção.
+
+Ant
+as principais tarefas ant são:
+ant dependencias (baixa as dependencias)
+ant testar (roda todos os testes)
+ant testes-unitarios (roda os testes unitarios)
+ant testes-aceitacao (roda testes de aceitacao)
+ant build (baixa dependencias, roda testes e faz deploy)
+
+Ivy
+Basta configurar as dependências no arquivo ivy.xml
+
+
+Host e sua máquina
+É indicado que você instale na máquina os seguintes pacotes:
+sudo apt-get install tomcat6 git-core ant openjdk-6-jdk curl
+
+Também é importante que a jar http://www.jcraft.com/jsch/ seja baixada e movida para a
+pasta ~/.ant/lib/ para que o ant consiga executar a task "scp".
+
+
+Eclipse
+As classpaths já estão configuradas no arquivo .classpath. O único problema é que as jars de teste e do jetty
+devem ser adicionadas manualmente no build path. :/
+
+
+Testes
+Quando ocorrer um erro nos testes, os relatórios estarão localizados em ./relatorios-de-testes/

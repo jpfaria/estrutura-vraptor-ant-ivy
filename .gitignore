@@ -1,0 +1,9 @@
+WebContent/WEB-INF/classes
+WebContent/WEB-INF/classes-test
+WebContent/WEB-INF/lib
+bin/
+build/
+ivy/
+lib/
+relatorios-de-teste/
+jetty/*/*
