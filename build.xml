@@ -1,4 +1,4 @@
-<project name="pagpag" default="init" xmlns:ivy="antlib:org.apache.ivy.ant">
+<project name="project" default="init" xmlns:ivy="antlib:org.apache.ivy.ant">
 	<property file="build.properties" />
 	<property file="jetty.properties" />
 	<property file="database.properties" />
@@ -124,7 +124,7 @@
 			<format property="timestamp" pattern="yyyy-MM-dd-HH-mm" locale="pt-BR" />  
 		</tstamp> 
 		<exec executable="sh">
-			<arg line ="-c 'mysqldump -u root -x -e -B pagpag | gzip > pagpag_backup.${timestamp}.sql.gz'"/>
+			<arg line ="-c 'mysqldump -u root -x -e -B project | gzip > project_backup.${timestamp}.sql.gz'"/>
 		</exec>
 		<exec executable="sh">
 			<arg line ="-c 'curl -X POST -d @filename ${amazon.s3}"/>
